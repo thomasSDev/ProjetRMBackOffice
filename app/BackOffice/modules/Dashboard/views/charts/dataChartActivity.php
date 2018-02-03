@@ -91,7 +91,6 @@
 			}
 			
 		} 
-		/*var_dump($janvierCount. ' ' .$fevrierCount. ' ' .$marsCount. ' ' .$avrilCount. ' ' .$maiCount. ' ' .$juinCount. ' ' .$juilletCount. ' ' .$aoutCount. ' ' .$septembreCount. ' ' .$octobreCount. ' ' .$novembreCount. ' ' .$decembreCount);
-		die;*/
+		
 
 		

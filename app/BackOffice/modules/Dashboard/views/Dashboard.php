@@ -46,7 +46,7 @@
 			}?>
 		</table>
 	</div>
-
+	
 	<div id="boxDonutsTypeDemande" class="col-xs-12 col-md-12 col-lg-7">
 		<h2>Demandes les plus fréquentes</h2>
 		<div id="donutsTypeDemande" class="col-xs-12 col-md-12 col-lg-12">
@@ -55,6 +55,7 @@
 	</div>
 	
 
+    
 
 	<div id="prochainsRDVDashboard" class="col-xs-12 col-md-12 col-lg-4 col-lg-push-1">
 		<h2><a href="/rdv-futur.html">Liste des prochains rendez-vous</a></h2>
@@ -97,12 +98,12 @@
 	        
 
 	    </div>
-	</div>   
+	</div>    
 	
-	<script type="text/javascript">
+    <script type="text/javascript">
 	  var scriptData = <?php echo json_encode($scriptData ); ?>;
 	</script>
-	
+
     <script type="text/javascript">
 		Morris.Bar({
 			element: 'graphActivite',

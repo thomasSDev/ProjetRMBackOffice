@@ -40,14 +40,18 @@ class DashboardController extends BackController
     $this->page->addVar('nombreDemandes', $manager->countNonTraitee());
 
     //count messages par type de demande
-
-    /*$typeDemande = 'Devis';
-    $this->page->addVar('nombreDemandesDevis', $manager->countParTypeDemande($typeDemande));*/
+    
     $this->page->addVar('nombreDemandesDevis', $manager->countDevis());
     $this->page->addVar('nombreDemandesDepannage', $manager->countDepannage());
     $this->page->addVar('nombreDemandesRamonnage', $manager->countRamonnage());
     $this->page->addVar('nombreDemandesInstallation', $manager->countInstallation());
-
+    $this->page->addVar('scriptData', $scriptData = Array(
+                                                    'Devis' => $manager->countDevis(),
+                                                    'Depannage' => $manager->countDepannage(),
+                                                    'Installation' => $manager->countRamonnage(),
+                                                    'Ramonage' => $manager->countInstallation()
+                                                    )
+                        );
     
     $this->page->addVar('title', 'Liste des prochains rendez-vous');
 
