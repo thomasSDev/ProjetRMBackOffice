@@ -10,4 +10,7 @@ $( document ).ready(function() {
 	var donutTypeDemande = Object.create(DonutTypeDemande);
 	donutTypeDemande.init();
 
+	var graphActivite = Object.create(GraphActivite);
+	graphActivite.init();
+	
 });

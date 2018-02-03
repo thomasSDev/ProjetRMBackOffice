@@ -91,6 +91,22 @@
 			}
 			
 		} 
+
+		$scriptDataMois  = array(
+			"janvierCount" =>  $janvierCount,
+			"fevrierCount" =>  $fevrierCount,
+			"marsCount" =>  $marsCount,
+			"avrilCount" =>  $avrilCount,
+			"maiCount" =>  $maiCount,
+			"juinCount" =>  $juinCount,
+			"juilletCount" =>  $juilletCount,
+			"aoutCount" =>  $aoutCount,
+			"septembreCount" =>  $septembreCount,
+			"octobreCount" =>  $octobreCount,
+			"novembreCount" =>  $novembreCount,
+			"decembreCount" =>  $decembreCount
+		);
+
 		
 
 		
