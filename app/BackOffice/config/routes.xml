@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+  <route url="/" module="Dashboard" action="Dashboard" />
+  <route url="/clients-liste.html" module="Client" action="listeClients" />
+  <route url="/clients-liste-([0-9]+)\.html" module="Client" action="listeClients" vars="page" />
+  <route url="/clients-liste.html\?recherche=([A-Za-z]+)" module="Client" action="listeClients" vars="recherche" />
+  <route url="/clients-liste-([0-9]+)\.html\?recherche=([A-Za-z]+)" module="Client" action="listeClients" vars="page" />
+  <route url="/client-([0-9]+)\.html" module="Client" action="detailsClient" vars="id"/>
+  <route url="/client-insert.html" module="Client" action="insertClient" />
+  <route url="/client-update-([0-9]+)\.html" module="Client" action="updateClient" vars="id" />
+  <route url="/client-delete-([0-9]+)\.html" module="Client" action="deleteClient" vars="id" />
+  
+  <route url="/calendrier.html" module="RendezVous" action="calendrier" />
+  <route url="/calendrier-([0-9]+)\.html" module="RendezVous" action="calendrier" vars="pagesuivante"/>
+  <route url="/calendrier--([0-9]+)\.html" module="RendezVous" action="calendrier" vars="pageprecedente"/>
+  <route url="/rdv-([0-9]+)\.html" module="RendezVous" action="detailsRendezVous" vars="id" />
+  <route url="/rdv-insert-par-client-([0-9]+)\.html" module="RendezVous" action="insertRendezVous" vars="idClient_Rdv" />
+  <route url="/rdv-precedents.html" module="RendezVous" action="listeRendezVousPrecedent" />
+  <route url="/rdv-futur.html" module="RendezVous" action="listeRendezVousFutur" />
+  <route url="/rdv-precedents-([0-9]+)\.html" module="RendezVous" action="listeRendezVousPrecedent" vars="page"/>
+  <route url="/rdv-futur-([0-9]+)\.html" module="RendezVous" action="listeRendezVousFutur" vars="page"/>
+  <route url="/rdv-update-([0-9]+)\.html" module="RendezVous" action="updateRendezVous" vars="id" />
+  <route url="/rdv-delete-([0-9]+)\.html" module="RendezVous" action="deleteRendezVous" vars="id" />
+  <route url="/rdv-effectue-([0-9]+)\.html" module="RendezVous" action="interventionEffectuee" vars="id"/>
+
+  <route url="/message-([0-9]+)\.html" module="Message" action="detailsMessage" vars="id" />
+  <route url="/message-update-([0-9]+)\.html" module="Message" action="updateMessage" vars="id" />
+  <route url="/messages-liste.html" module="Message" action="listeMessages" vars="page"/>
+  <route url="/messages-liste-([0-9]+)\.html" module="Message" action="listeMessages" vars="page" />
+  <route url="/user-update-([0-9]+)\.html" module="User" action="updateUser" vars="id" />
+  <route url="/user-delete-([0-9]+)\.html" module="User" action="deleteUser" vars="id" />
+  <route url="/user-save.html" module="User" action="insert"/>
+  <route url="/user-liste.html" module="User" action="listeUsers" />
+  <route url="/user-destroy.html" module="User" action="sessionDestroy" vars="id"/>
+
+</routes>
