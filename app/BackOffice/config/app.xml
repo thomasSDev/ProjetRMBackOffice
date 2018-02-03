@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <definitions>
 	<define var="nombre_elements" value="20" />
+	<define var="nombre_elements_extrait" value="5" />
 	  
 </definitions>

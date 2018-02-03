@@ -23,7 +23,7 @@ class RendezVousController extends BackController
   public function executeCalendrier(HTTPRequest $request)
   {
     //rendez-vous prochains
-    $elementsPerPage = $this->app->config()->get('nombre_elements');
+    $elementsPerPage = $this->app->config()->get('nombre_elements_extrait');
 
     $manager = $this->managers->getManagerOf('RendezVous');
 
@@ -39,7 +39,7 @@ class RendezVousController extends BackController
     }
     $this->page->addVar('listeRendezVousProchains', $rendezVousProchains);
 
-    //rednez-vous précédents
+    //rendez-vous précédents
 
     $manager = $this->managers->getManagerOf('RendezVous');
 
@@ -117,22 +117,6 @@ class RendezVousController extends BackController
     $this->page->addVar('semaineUrlIncremente', $semaineUrlIncremente);
     $this->page->addVar('semaineUrlDecremente', $semaineUrlDecremente);
 
-
-    //PLANNING V2
-    /*$manager = $this->managers->getManagerOf('RendezVous');
-
-    $rendezVousPlanning = $manager->getListPlanning();
-
-    $i = 0;
-    
-    foreach($rendezVousPlanning as $rdvPlanning)
-    {
-      $client = $this->managers->getManagerOf('Client')->getUnique($rdvPlanning['idClient_Rdv']);
-      $rendezVousPlanning[$i]->client = $client;
-      $i++;
-    }
-    $this->page->addVar('rendezVousPlanning', $rendezVousPlanning);*/
-
   }
 
   public function executeListeRendezVousPrecedent(HTTPRequest $request)
@@ -140,7 +124,6 @@ class RendezVousController extends BackController
     //Historique des rendez-vous
     $this->page->addVar('title', 'Historique des rendez-vous');
     $manager = $this->managers->getManagerOf('RendezVous');
-    
     
     //pagination
     

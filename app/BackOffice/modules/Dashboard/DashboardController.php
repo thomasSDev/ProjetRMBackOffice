@@ -61,7 +61,7 @@ class DashboardController extends BackController
     $this->page->addVar('listeDatesRendezVous', $manager->getListDate());
     
     //Liste des prochains rendez-vous 
-    $elementsPerPage = $this->app->config()->get('nombre_elements');
+    $elementsPerPage = $this->app->config()->get('nombre_elements_extrait');
 
     $rendezVousProchains = $manager->getListProchain(0, $elementsPerPage);
 
