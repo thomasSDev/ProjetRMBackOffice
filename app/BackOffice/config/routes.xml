@@ -25,6 +25,7 @@
 
   <route url="/message-([0-9]+)\.html" module="Message" action="detailsMessage" vars="id" />
   <route url="/message-update-([0-9]+)\.html" module="Message" action="updateMessage" vars="id" />
+  <route url="/message-update-non-traite-([0-9]+)\.html" module="Message" action="updateMessageNonTraite" vars="id" />
   <route url="/messages-liste.html" module="Message" action="listeMessages" vars="page"/>
   <route url="/messages-liste-([0-9]+)\.html" module="Message" action="listeMessages" vars="page" />
   <route url="/user-update-([0-9]+)\.html" module="User" action="updateUser" vars="id" />

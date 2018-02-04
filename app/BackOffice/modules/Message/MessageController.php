@@ -78,29 +78,41 @@ class MessageController extends BackController
     $this->page->addVar('client', $client);
 
     if($message['demandeTraitee'] == 1)
-            {
-              $traite = '<span style=color:green>Message traité</span>';
-              $boutonTraite = 'Définir le message comme non traité';
-            }
-            else
-            {
-              $traite = '<span style=color:red>Message non traité</span>';
-              $boutonTraite = 'Définir le message comme traité';
-            }
+    {
+      $traite = '<span style=color:green>Message traité</span>';
+      $boutonTraite = 'Définir le message comme non traité';
+      $updateMessageStatus = "/message-update-non-traite-".$message['id'].".html";
+    }
+    else
+    {
+      $traite = '<span style=color:red>Message non traité</span>';
+      $boutonTraite = 'Définir le message comme traité';
+      $updateMessageStatus = "/message-update-".$message['id'].".html";
+    }
     $this->page->addVar('traite', $traite);
-    $this->page->addVar('boutonTraite', $boutonTraite);        
+    $this->page->addVar('boutonTraite', $boutonTraite);
+    $this->page->addVar('updateMessageStatus', $updateMessageStatus);
 
   }
 
-  
+  //change le status du message en traité
   public function executeUpdateMessage(HTTPRequest $request)
   {
-    
- 
     $message = $request->getData('id');
  
     $this->managers->getManagerOf('Message')->demandeTraitee($message);
-    $this->app->users()->setFlash('<div class="alert alert-success" role="alert">le message est considéré comme traité !</div>');
+    $this->app->users()->setFlash('<div class="alert alert-success" role="alert">Le message est considéré comme traité !</div>');
+    $this->app->httpResponse()->redirect('/');
+
+  }
+
+  //change le status du message en non traité
+  public function executeUpdateMessageNonTraite(HTTPRequest $request)
+  {
+    $message = $request->getData('id');
+ 
+    $this->managers->getManagerOf('Message')->demandeNonTraitee($message);
+    $this->app->users()->setFlash('<div class="alert alert-success" role="alert">Le message est considéré comme non traité !</div>');
     $this->app->httpResponse()->redirect('/');
 
   }

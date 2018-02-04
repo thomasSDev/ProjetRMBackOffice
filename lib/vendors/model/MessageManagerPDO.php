@@ -140,7 +140,12 @@ class MessageManagerPDO extends MessageManager
   {
     $q = $this->dao->prepare('UPDATE message SET demandeTraitee = 1 WHERE id ='.(int) $id);
  
-    //$q->bindValue(':id', $id->id(), \PDO::PARAM_INT);
+    $q->execute();
+  }
+
+  public function demandeNonTraitee($id)
+  {
+    $q = $this->dao->prepare('UPDATE message SET demandeTraitee = 0 WHERE id ='.(int) $id);
  
     $q->execute();
   }

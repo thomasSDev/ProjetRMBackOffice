@@ -118,9 +118,8 @@
 		</div>	
 
 		<div class="boutonFinPage col-xs-12 col-md-10 col-lg-8  col-lg-push-2">
-			<a href="/message-update-<?= 
-				  $message['id']?>.html">
-			 	<button class="btn btn-primary" data-toggle="tooltip" title="Modifier le rendez-vous"><?= $boutonTraite ?></button></a>
+			<a href=<?= $updateMessageStatus ?>>
+			 	<button class="btn btn-primary" data-toggle="tooltip" title="Changer le status du message"><?= $boutonTraite ?></button></a>
 			 	
 			<a href="/client-<?= 
 				  $message['idClient']?>.html">

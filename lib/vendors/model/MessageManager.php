@@ -67,12 +67,17 @@ abstract class MessageManager extends Manager
    */
   abstract public function getUnique($id);
   /**
-   * Méthode permettant de signaler un message.
+   * Méthode permettant de changer le status d'un message comme traité.
    * @param $message le message à signaler
    * @return Message
    */
   abstract public function demandeTraitee($id);
-
+  /**
+   * Méthode permettant de changer le status d'un message en non traité.
+   * @param $message le message à signaler
+   * @return Message
+   */
+  abstract public function demandeNonTraitee($id);
     /**
    * Méthode permettant d'obtenir la liste des demandes non traitées.
    * @param $debut int le premièr message à sélectionner
