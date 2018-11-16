@@ -77,7 +77,7 @@ class WebServiceController extends BackController
       $this->managers->getManagerOf('Message')->insert($message);
 
       //envoi de mail au propriétaire de l'application
-      $emailAddress = "sutre.thomas.29@gmail.com"; 
+      $emailAddress = /*"Adresse de l'admin site"*/; 
 
       $emailSubject = 'Message client ' . $client['prenom'] . ' ' . $client['nom'] . ' ' . $message['typeDemande'];
 
@@ -139,7 +139,7 @@ class WebServiceController extends BackController
 
       $emailHeader  = 'MIME-Version: 1.0' . "\r\n";
       $emailHeader .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-      $emailHeader .= 'From: Raphael Maguer NoReply <rmaguer@backoffice.com>' . "\r\n";
+      $emailHeader .= 'From: Raphael Maguer NoReply </*Adresse no reply du site */>' . "\r\n";
       
       mail($emailAddress, $emailSubject, $emailMessage, $emailHeader);              
 
@@ -208,7 +208,7 @@ class WebServiceController extends BackController
                       ';
       $emailClientHeader  = 'MIME-Version: 1.0' . "\r\n";
       $emailClientHeader .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-      $emailClientHeader .= 'From: Raphael Maguer NoReply <rmaguer@backoffice.com>' . "\r\n";  
+      $emailClientHeader .= 'From: Raphael Maguer NoReply </*Adresse no reply du site*/>' . "\r\n";  
       mail($emailClientAddress, $emailClientSubject, $emailClientMessage, $emailClientHeader);
 
       // Renvoi page d'accueil du site web avec message ok dans l'url pour le message de confirmation pour le client
